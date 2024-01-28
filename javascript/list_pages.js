@@ -1,6 +1,7 @@
 // Define an array of page names
 var pages = [
     "lesson1",
+    "lesson2"
     
     // Add more page names as needed
 ];
