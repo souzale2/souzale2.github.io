@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exploring God's Word</title>
+    <link rel="stylesheet" href="../wwwroot/lib/bootstrap/css/bootstrap.min.css">
+    <script src="../wwwroot/lib/jquery/dist/jquery.min.js"></script>
+    <style>
+        /* Style the container for the side-scrolling list */
+        .scrolling-list {
+  overflow-x: auto;
+  white-space: nowrap;
+  width: 100%;
+  scroll-snap-type: x mandatory;
+}
+
+.scrolling-container {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.image-caption-wrapper {
+  flex: 0 0 auto;
+  width: 100%; /* Full width of the .scrolling-list */
+  height: auto; /* Height is auto to maintain aspect ratio */
+  position: relative;
+  scroll-snap-align: start; /* For scroll snapping */
+}
+
+.image-caption-wrapper img {
+  width: 100%;
+  height: auto;
+  display: block; /* Removes any extra space below the image */
+}
+
+.caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  text-align: center;
+  padding: 5px;
+  box-sizing: border-box;
+}
+
+
+
+    </style>
+</head>
+<body>
+
+    <div class="scrolling-list">
+        <div class="scrolling-container" id="image-container">
+          <!-- JavaScript will populate the images here -->
+          
+        </div>
+    </div>
+    
+
+      <script>
+        var images = [];
+    
+        window.addEventListener('message', (event) => {
+            
+            images = JSON.parse(event.data);
+
+            // Function to create image with caption and append to the container
+            function loadImages(images) {
+                console.log('Loading images:');
+              var container = document.getElementById('image-container');
+            
+              images.forEach(function(image) {
+                var wrapper = document.createElement('div');
+                wrapper.className = 'image-caption-wrapper';
+
+                var img = document.createElement('img');
+                img.src = image.url;
+                img.alt = image.caption; // Using caption as alt for accessibility
+
+                var caption = document.createElement('div');
+                caption.className = 'caption';
+                caption.textContent = image.caption;
+
+                wrapper.appendChild(img);
+                wrapper.appendChild(caption);
+
+                container.appendChild(wrapper);
+              });
+            }
+
+            // Call the function to load images
+            loadImages(images);
+
+        
+        });
+    </script>
+    
+</body>
+</html>
