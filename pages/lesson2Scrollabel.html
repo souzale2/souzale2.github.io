@@ -78,22 +78,26 @@
               var container = document.getElementById('image-container');
             
               images.forEach(function(image) {
-                var wrapper = document.createElement('div');
-                wrapper.className = 'image-caption-wrapper';
+    var wrapper = document.createElement('div');
+    wrapper.className = 'image-caption-wrapper';
 
-                var img = document.createElement('img');
-                img.src = image.url;
-                img.alt = image.caption; // Using caption as alt for accessibility
+    var img = document.createElement('img');
+    img.src = image.url;
+    img.alt = image.caption; // Using caption as alt for accessibility
 
-                var caption = document.createElement('div');
-                caption.className = 'caption';
-                caption.textContent = image.caption;
+    var caption = document.createElement('div');
+    caption.className = 'caption';
+    caption.textContent = image.caption;
 
-                wrapper.appendChild(img);
-                wrapper.appendChild(caption);
+    // Add CSS styling to allow caption text to wrap
+    caption.style.whiteSpace = 'pre-wrap'; // Allow wrapping of text
 
-                container.appendChild(wrapper);
-              });
+    wrapper.appendChild(img);
+    wrapper.appendChild(caption);
+
+    container.appendChild(wrapper);
+});
+
             }
 
             // Call the function to load images
