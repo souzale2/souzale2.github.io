@@ -27,10 +27,33 @@
 <body>
    
     <div id="content-container"></div>
+    
 
     <div class="container">
         <div class="row">
+
             <div class="col-md-12 center-text" id="content">
+
+                <!-- <div id="language-switcher">
+                  <button onclick="SwitchLanguage('en')">English</button>
+                  <button onclick="SwitchLanguage('pt')">Portuguese</button>
+                </div>
+
+                <script> 
+                  var language = "pt"; 
+                  function SwitchLanguage(passedLanguage) {
+                    if (passedLanguage === 'en') {
+                      language = "lesson1.html";
+                    } else if (passedLanguage === 'pt') {
+                      language = "licao1.html";
+                    }
+
+                    //switchVisibility 
+                    document.getElementById('language-switcher').style.display = 'none';
+                  }
+                </script> -->
+                <br>
+                <br>
 
                 <h1>EXPLORANDO A PALAVRA DE DEUS</h1>
                 <p>LIÇÃO 1a</p>
@@ -127,121 +150,228 @@
         window.onload = function() {
             var content = document.getElementById('content');
             var html = content.innerHTML;
-            var values = [
-                          "seis dias",
-                          "habitado",
-                          "relacionamento",
-                          "imagem",
-                          "criativo",
-                          "espiritual",
-                          "raciocínio",
-                          "relacional",
-                          "autoconsciente",
-                          "livre arbítrio",
-                          "poder de escolha",
-                          "proximidade",
-                          "dois mundos",
-                          "físico",
-                          "espiritual",
-                          "espiritualmente mortos",
-                          "nascer de novo",
-                          "água = arrependimento e batismo",
-                          "Espírito = Enchimento do Espírito Santo"
-                        ]; // Replace with your actual values
+
+            var language = prompt("please enter a language: (en or pt)")
+            
+            if(language === "pt") {
+              var values = [
+                "seis dias",
+                "habitado",
+                "relacionamento",
+                "imagem",
+                "criativo",
+                "espiritual",
+                "raciocínio",
+                "relacional",
+                "autoconsciente",
+                "livre arbítrio",
+                "poder de escolha",
+                "proximidade",
+                "dois mundos",
+                "físico",
+                "espiritual",
+                "espiritualmente mortos",
+                "nascer de novo",
+                "água = arrependimento e batismo",
+                "Espírito = Enchimento do Espírito Santo"
+              ]; // Replace with your actual values
+            } else {
+              var values = [
+                "six days",
+                "inhabited",
+                "relationship",
+                "image",
+                "creative",
+                "spiritual",
+                "reasoning",
+                "relational",
+                "self-aware",
+                "free will",
+                "power of choice",
+                "proximity",
+                "two worlds",
+                "physical",
+                "spiritual",
+                "spiritually dead",
+                "born again",
+                "water = repentance and baptism",
+                "Spirit = Filling of the Holy Spirit"
+              ]; // Replace with your actual values
+            }
 
             var idCounter = 0;
             var newHtml = html.replace(/__________/g, function() {
-                var replacement = '<input type="text" id="input-field-' + idCounter + '" class="input-field" /><button class="validate-button" onclick="validateInput(' + idCounter + ', \'' + values[idCounter] + '\')">Validate</button>';
+                var replacement = '<input type="text" id="input-field-' + idCounter + '" class="input-field" /><button class="validate-button" onclick="validateInput(' + idCounter + ', \'' + values[idCounter] + '\', \'' + language + '\')">Validate</button>';
                 idCounter++;
                 return replacement;
             });
             content.innerHTML = newHtml;
         };
 
-        function validateInput(id, value) {
+        function validateInput(id, value, language) {
             //funny list if uses gets the answer correctly
-            const elogios = [
-              "Wow, você é um gênio!",
-              "Caramba, sua inteligência brilhou!",
-              "Incrível, você está arrasando!",
-              "Uau, você é uma enciclopédia ambulante!",
-              "Impressionante, você realmente sabe das coisas!",
-              "Não sabia que você era tão esperto(a)!",
-              "Você é como o Google humano!",
-              "Estou impressionado(a) com o seu conhecimento!",
-              "Você é um mestre do assunto!",
-              "Bravo! Você é demais!",
-              "Seu cérebro é uma mina de ouro!",
-              "Você é a prova de que a inteligência é contagiosa!",
-              "Você deve ter um diploma em ser inteligente!",
-              "Você acertou em cheio!",
-              "Sua mente é uma força da natureza!",
-              "Que talento! Você é uma estrela!",
-              "Você é tão esperto(a) que os cientistas deveriam estudar você!",
-              "Você deve ser uma máquina de aprendizado!",
-              "Seu conhecimento é digno de um prêmio Nobel!",
-              "Eu não ficaria surpreso se você fosse um gênio escondido!",
-              "Seu cérebro merece uma salva de palmas!",
-              "Você é mais afiado(a) que uma lâmina suíça!",
-              "Sua inteligência é de outro mundo!",
-              "Você é um verdadeiro conhecedor!",
-              "Nunca vi alguém tão esperto!",
-              "Você é o rei/ rainha do conhecimento!",
-              "Você é um verdadeiro mestre das respostas!",
-              "Seu cérebro é um tesouro inestimável!",
-              "Você deve ser um prodígio!",
-              "É uma honra conversar com alguém tão inteligente!",
-              "Você é um raio de sabedoria!",
-            ];
+            let elogios = [];
+            let respostasErradas = [];
 
-            // Escolha um elogio aleatoriamente
-            const elogioAleatorio = elogios[Math.floor(Math.random() * elogios.length)];
+            console.log("works");
+            console.log(language);
+            if(language === "pt")
+            {
+                elogios = [
+                "Wow, você é um gênio!",
+                "Caramba, sua inteligência brilhou!",
+                "Incrível, você está arrasando!",
+                "Uau, você é uma enciclopédia ambulante!",
+                "Impressionante, você realmente sabe das coisas!",
+                "Não sabia que você era tão esperto(a)!",
+                "Você é como o Google humano!",
+                "Estou impressionado(a) com o seu conhecimento!",
+                "Você é um mestre do assunto!",
+                "Bravo! Você é demais!",
+                "Seu cérebro é uma mina de ouro!",
+                "Você é a prova de que a inteligência é contagiosa!",
+                "Você deve ter um diploma em ser inteligente!",
+                "Você acertou em cheio!",
+                "Sua mente é uma força da natureza!",
+                "Que talento! Você é uma estrela!",
+                "Você é tão esperto(a) que os cientistas deveriam estudar você!",
+                "Você deve ser uma máquina de aprendizado!",
+                "Seu conhecimento é digno de um prêmio Nobel!",
+                "Eu não ficaria surpreso se você fosse um gênio escondido!",
+                "Seu cérebro merece uma salva de palmas!",
+                "Você é mais afiado(a) que uma lâmina suíça!",
+                "Sua inteligência é de outro mundo!",
+                "Você é um verdadeiro conhecedor!",
+                "Nunca vi alguém tão esperto!",
+                "Você é o rei/ rainha do conhecimento!",
+                "Você é um verdadeiro mestre das respostas!",
+                "Seu cérebro é um tesouro inestimável!",
+                "Você deve ser um prodígio!",
+                "É uma honra conversar com alguém tão inteligente!",
+                "Você é um raio de sabedoria!",
+              ];
+              
+                respostasErradas = [
+                "Era quase isso, mas não exatamente...",
+                "Bom, essa foi uma tentativa interessante!",
+                "Você está no caminho certo, mas não completamente.",
+                "Quase lá, continue tentando!",
+                "Nada mal, mas não é a resposta correta.",
+                "Boa tentativa! Vamos dar mais uma chance?",
+                "Parece que você deu uma escorregada nessa resposta.",
+                "E por uma unha, você quase acertou!",
+                "Não era bem isso, mas continue tentando!",
+                "Você está esquentando, mas ainda não acertou.",
+                "A resposta certa está ao alcance, mas não era essa.",
+                "Não se preocupe, erros acontecem com os melhores!",
+                "Você está perto, mas não é exatamente isso.",
+                "Quase acertou, mas não foi dessa vez.",
+                "Boa tentativa! A próxima pode ser a certa!",
+                "Não desanime, você vai chegar lá!",
+                "Você está se aproximando, mas não é isso ainda.",
+                "Continue tentando, você vai conseguir!",
+                "Errou por pouco, não desista!",
+                "Você está no caminho certo, mas não é a resposta final.",
+                "Não foi dessa vez, mas não desanime!",
+                "Uma resposta quase perfeita, mas não exatamente.",
+                "Quase um acerto de mestre!",
+                "Não é a resposta correta, mas você está chegando lá!",
+                "Você está esquentando, mas ainda não acertou o alvo.",
+                "Não se preocupe, aprender com os erros é o caminho certo!",
+                "Continue tentando, você está progredindo!",
+                "Sua resposta foi um desvio criativo!",
+                "Você está na trilha certa, mas não é isso!",
+                "Bom esforço! A resposta está próxima.",
+                "Erros são oportunidades para aprender!",
+                "Quase lá, continue tentando!",
+                "Você está se aproximando, continue assim!",
+                "A resposta certa está próxima, mas não era essa.",
+                "Não foi dessa vez, mas você está se saindo bem!",
+                "Sua resposta foi única, mas não a correta.",
+              ];
+            } else {
+                 elogios = [
+                "Wow, you're a genius!",
+                "Wow, your intelligence is shining!",
+                "Incredible, you're killing it!",
+                "Wow, you're a walking encyclopedia!",
+                "Impressive, you really know your stuff!",
+                "I didn't know you were so smart!",
+                "You're like the human Google!",
+                "I'm impressed with your knowledge!",
+                "You're a master of the subject!",
+                "Bravo! You're amazing!",
+                "Your brain is a gold mine!",
+                "You're proof that intelligence is contagious!",
+                "You must have a degree in being smart!",
+                "You hit the nail on the head!",
+                "Your mind is a force of nature!",
+                "What a talent! You're a star!",
+                "You're so smart that scientists should study you!",
+                "You must be a learning machine!",
+                "Your knowledge is worthy of a Nobel Prize!",
+                "I wouldn't be surprised if you were a hidden genius!",
+                "Your brain deserves a round of applause!",
+                "You're sharper than a Swiss blade!",
+                "Your intelligence is out of this world!",
+                "You're a true connoisseur!",
+                "I've never seen anyone so smart!",
+                "You're the king/queen of knowledge!",
+                "You're a true master of answers!",
+                "Your brain is a priceless treasure!",
+                "You must be a prodigy!",
+                "It's an honor to talk to someone so intelligent!",
+                "You're a ray of wisdom!",
+              ];
+              
+                respostasErradas = [
+                "That was close, but not quite...",
+                "Well, that was an interesting attempt!",
+                "You're on the right track, but not quite there.",
+                "Almost there, keep trying!",
+                "Not bad, but it's not the right answer.",
+                "Good try! Let's give it another shot?",
+                "Looks like you slipped up on that answer.",
+                "And by a hair, you almost got it!",
+                "That wasn't quite it, but keep trying!",
+                "You're getting warmer, but you haven't hit it yet.",
+                "The right answer is within reach, but it wasn't that.",
+                "Don't worry, mistakes happen to the best of us!",
+                "You're close, but it's not quite there.",
+                "Almost got it, but not this time.",
+                "Good try! The next one might be the right one!",
+                "Don't get discouraged, you'll get there!",
+                "You're getting close, but it's not quite there.",
+                "Keep trying, you'll get there!",
+                "You missed by a hair, but don't give up!",
+                "You're on the right track, but it's not the final answer.",
+                "Don't get discouraged, it wasn't this time!",
+                "Almost a perfect answer, but not quite.",
+                "You're getting there, but it's not quite there yet.",
+                "You're getting warmer, but you haven't hit the target yet.",
+                "Don't worry, learning from mistakes is the right way!",
+                "Keep trying, you're making progress!",
+                "Your answer was a creative detour!",
+                "You're on the right track, but it's not that!",
+                "Good effort! The answer is close.",
+                "Mistakes are opportunities to learn!",
+                "Almost there, keep trying!",
+                "You're getting close, keep it up!",
+                "The right answer is close, but it wasn't that.",
+                "Not this time, but you're doing well!",
+                "Your answer was unique, but not the right one.",
+              ];
             
-            const respostasErradas = [
-              "Era quase isso, mas não exatamente...",
-              "Bom, essa foi uma tentativa interessante!",
-              "Você está no caminho certo, mas não completamente.",
-              "Quase lá, continue tentando!",
-              "Nada mal, mas não é a resposta correta.",
-              "Boa tentativa! Vamos dar mais uma chance?",
-              "Parece que você deu uma escorregada nessa resposta.",
-              "E por uma unha, você quase acertou!",
-              "Não era bem isso, mas continue tentando!",
-              "Você está esquentando, mas ainda não acertou.",
-              "A resposta certa está ao alcance, mas não era essa.",
-              "Não se preocupe, erros acontecem com os melhores!",
-              "Você está perto, mas não é exatamente isso.",
-              "Quase acertou, mas não foi dessa vez.",
-              "Boa tentativa! A próxima pode ser a certa!",
-              "Não desanime, você vai chegar lá!",
-              "Você está se aproximando, mas não é isso ainda.",
-              "Continue tentando, você vai conseguir!",
-              "Errou por pouco, não desista!",
-              "Você está no caminho certo, mas não é a resposta final.",
-              "Não foi dessa vez, mas não desanime!",
-              "Uma resposta quase perfeita, mas não exatamente.",
-              "Quase um acerto de mestre!",
-              "Não é a resposta correta, mas você está chegando lá!",
-              "Você está esquentando, mas ainda não acertou o alvo.",
-              "Não se preocupe, aprender com os erros é o caminho certo!",
-              "Continue tentando, você está progredindo!",
-              "Sua resposta foi um desvio criativo!",
-              "Você está na trilha certa, mas não é isso!",
-              "Bom esforço! A resposta está próxima.",
-              "Erros são oportunidades para aprender!",
-              "Quase lá, continue tentando!",
-              "Você está se aproximando, continue assim!",
-              "A resposta certa está próxima, mas não era essa.",
-              "Não foi dessa vez, mas você está se saindo bem!",
-              "Sua resposta foi única, mas não a correta.",
-            ];
+            }
+          //Escolha uma resposta certa aleatoriamente
+            const elogioAleatorio = elogios[Math.floor(Math.random() * elogios.length)];
 
             // Escolha uma resposta errada aleatoriamente
             const respostaErradaAleatoria = respostasErradas[Math.floor(Math.random() * respostasErradas.length)];
 
 
             var inputField = document.getElementById('input-field-' + id);
-            if (inputField.value === value) {
+            if (inputField.value.toLowerCase().trim() === value.toLowerCase().trim()) {
                 alert("Correto!! " + elogioAleatorio);
             } else {
                 alert(respostaErradaAleatoria + " " + "Resposta correta e: " + value);
