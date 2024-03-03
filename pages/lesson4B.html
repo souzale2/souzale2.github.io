@@ -20,7 +20,22 @@
             /* margin-top: 50vh;
             transform: translateY(-50%); */
         }
-        
+
+
+        #pic0 {
+            display: none; /* Initially hide the iframe */
+        }
+        #pic1 {
+            display: none; /* Initially hide the iframe */
+        }
+        #pic2{
+            display: none;
+        }
+        #pic3{
+            display: none;
+        }
+       
+       
     </style>
     
 </head>
@@ -40,7 +55,10 @@
                 <p>___________</p>
 
                
+                <div id="pic0">
+                    
                     <iframe
+                       
                          width="350"
                          height="576"
                          src="https://www.youtube.com/embed/anIoGfvs9SQ"
@@ -60,7 +78,11 @@
                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                          allowfullscreen>
                     </iframe>
-                
+                    <br>
+                    <br>
+                    <button id="00" onclick="CloseIframe('00')">Fecha</button>
+                </div>
+
                 <h1>EXPLORANDO A PALAVRA DE DEUS</h1>
                 <p>LIÇÃO 4b</p>
 
@@ -103,6 +125,26 @@
                 
                 <p>Jesus cumpriu a Lei cerimonial. Um ótimo exemplo disso é o mandamento da Páscoa (Êxodo 12:14). Este mandamento é cumprido através da Comunhão Cristã (1 Coríntios 5:7-8). Portanto, agora observamos a Páscoa em seu cumprimento.</p>
                 
+                <p>10 dessas leis tem um titulo. Qual E?</p>
+                <p>___________</p>
+
+                <div id="pic1">
+                    
+                    <iframe
+                       
+                         width="350"
+                         height="576"
+                         src="https://www.youtube.com/embed/cxXUEDbOxgo?si=pXLBUAA3L14Va6oO"
+                         title="YouTube video player"
+                         frameborder="0"
+                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                         allowfullscreen>
+                    </iframe>
+                    <br>
+                    <br>
+                    <button id="11" onclick="CloseIframe('11')">Fecha</button>
+                </div>
+
                 <h2>O PLANO DO TABERNÁCULO REPRESENTAVA A ABORDAGEM DO HOMEM A DEUS:</h2>
                 <p>Êxodo 25:8–9 (KJV 1900)
                 8 E far-me-ão um santuário, para que eu habite no meio deles.
@@ -116,6 +158,26 @@
                 
                 <p>Deus designou a tribo de Levi para ser um sacerdócio e trabalhar no Tabernáculo. (Todo o livro de Levítico é escrito para fornecer-lhes instruções sobre como manter o tabernáculo, realizar sacrifícios e expiar pecados). (Leia Números 8:13-16)</p>
                 
+                <p>Templo e um lugar de adocao que e estatico. Qual que e o nome do lugar de adoracao que movel?</p>
+                <p>___________</p>
+
+                <div id="pic2">
+                    
+                    <iframe
+                       
+                         width="350"
+                         height="576"
+                         src="https://www.youtube.com/embed/ceZHlc55HCg?si=P10KUhG-w2kwrmpq" 
+                         title="YouTube video player"
+                         frameborder="0"
+                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                         allowfullscreen>
+                    </iframe>
+                    <br>
+                    <br>
+                    <button id="22" onclick="CloseIframe('22')">Fecha</button>
+                </div>
+
                 <h2>O LAYOUT DO TABERNÁCULO:</h2>
                 <p>Uma Porta – Jesus é a porta (João 10:9).
                 O Altar de Bronze – Um lugar de sacrifício, morte e sangue derramado.</p>
@@ -149,6 +211,25 @@
                 
                 <p>O Plano do Tabernáculo era um meio temporário de relacionamento para Israel, e seus padrões prefiguravam nossa abordagem a Deus sob o Novo Testamento. Devemos reconhecer Jesus como a porta, devemos nos arrepender e lidar com nosso pecado, devemos ser lavados no batismo, e Deus promete nos encher com Seu Espírito e fazer Sua morada em nossos corações.</p>
 
+                <p>O TABERNÁCULO era um lugar que Deus e Israel tinhan --------</p>
+                <p>___________</p>
+
+                <div id="pic3">
+                    
+                    <iframe
+                       
+                         width="350"
+                         height="576"
+                         src="https://www.youtube.com/embed/naBMiLZesdg" 
+                         title="YouTube video player"
+                         frameborder="0"
+                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                         allowfullscreen>
+                    </iframe>
+                    <br>
+                    <br>
+                    <button id="33" onclick="CloseIframe('33')">Fecha</button>
+                </div>
 
             </div>
         </div>
@@ -162,20 +243,11 @@
             var content = document.getElementById('content');
             var html = content.innerHTML;
 
-            var language = prompt("please enter a language: (en or pt)")
-            
-            
-              var values =  [
-                              "MOISÉS", "poupo", "3 meses", "arca", "príncipe", "sofrimento", 
-                              "prazeres",  "abandonou", "recusou", "ponto de decisão", 
-                               "sarça", "ardente", "EU SOU", "SALVAÇÃO", "julgamento", 
-                              "Sangue", "Cordeiro", "Jesus", "Cristo", "arrependimento", "aplicado", 
-                              "Páscoa", "Nova", "Aliança", "Mar", "Vermelho", "batismo", "nuvem", "Espírito Santo"
-                            ];
+            var values =  ["Êxodo", "Dez Mandamentos","TABERNÁCULO","Comunhão"];
 
             var idCounter = 0;
             var newHtml = html.replace(/___________/g, function() {
-                var replacement = '<input type="text" id="input-field-' + idCounter + '" class="input-field" /><button class="validate-button" onclick="validateInput(' + idCounter + ', \'' + values[idCounter] + '\', \'' + language + '\')">Validate</button>';
+                var replacement = '<input type="text" id="input-field-' + idCounter + '" class="input-field" /><button class="validate-button" onclick="validateInput(' + idCounter + ', \'' + values[idCounter] + '\')">Validate</button>';
                 idCounter++;
                 return replacement;
             });
@@ -183,19 +255,21 @@
         };
 
         function validateInput(id, value, language) {
-          //Escolha uma resposta certa aleatoriamente
-            const elogioAleatorio = elogios[Math.floor(Math.random() * elogios.length)];
-
-            // Escolha uma resposta errada aleatoriamente
-            const respostaErradaAleatoria = respostasErradas[Math.floor(Math.random() * respostasErradas.length)];
-
-
+         
             var inputField = document.getElementById('input-field-' + id);
             if (inputField.value.toLowerCase().trim() === value.toLowerCase().trim()) {
-                alert("Correto!! " + elogioAleatorio);
+                alert("Correto!! ");
+                document.getElementById("pic" + id).style.display = "block";
+          
+              
             } else {
                 alert(respostaErradaAleatoria + " " + "Resposta correta e: " + value);
             }
+        }
+
+        function CloseIframe(id)
+        {
+            document.getElementById("pic" + id[0]).style.display = "none";
         }
 
     </script>
