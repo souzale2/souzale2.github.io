@@ -57,3 +57,12 @@ Lesson 1 Answers in order.
   "two",
   "int    
 ];
+
+Lesson 4A Answers in order (Left to right).
+var values = [
+               "Moses", "bush", "3 months", "ark", "prince", "suffering",
+               "pleasures", "abandoned", "refused", "point of decision",
+               "bush", "burning", "I AM", "salvation", "judgment",
+               "Blood", "Lamb", "Jesus", "Christ", "repentance", "applied",
+               "Passover", "New", "Covenant", "Sea", "Red", "baptism", "cloud", "Holy Spirit"
+             ];
