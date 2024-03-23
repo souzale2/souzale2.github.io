@@ -126,7 +126,7 @@
 
                 <p>5. Eles encontraram e seguiram a ___________: (Leia Êxodo 13:21-22)</p>
 
-                <p>Isso é um antegozo de ser cheio e conduzido pelo ___________ ___________.</p>
+                <p>Isso é um antegozo de ser cheio e conduzido pelo ___________.</p>
 
                 <p>O plano de Deus de libertação dos escravos hebreus do Egito antecipou nossa própria libertação da escravidão do pecado. (Veja Atos 2:37-39 & Romanos 6;3-5)</p>
 
@@ -154,6 +154,8 @@
             var language = prompt("please enter a language: (en or pt)")
             
             
+            if (language == 'pt')
+            {
               var values =  [
                               "MOISÉS", "poupo", "3 meses", "arca", "príncipe", "sofrimento", 
                               "prazeres",  "abandonou", "recusou", "ponto de decisão", 
@@ -161,7 +163,17 @@
                               "Sangue", "Cordeiro", "Jesus", "Cristo", "arrependimento", "aplicado", 
                               "Páscoa", "Nova", "Aliança", "Mar", "Vermelho", "batismo", "nuvem", "Espírito Santo"
                             ];
-
+            }
+            else
+            {
+                var values = [
+                              "Moses", "bush", "3 months", "ark", "prince", "suffering",
+                              "pleasures", "abandoned", "refused", "point of decision",
+                              "bush", "burning", "I AM", "salvation", "judgment",
+                              "Blood", "Lamb", "Jesus", "Christ", "repentance", "applied",
+                              "Passover", "New", "Covenant", "Sea", "Red", "baptism", "cloud", "Holy Spirit"
+                            ];
+            }
             var idCounter = 0;
             var newHtml = html.replace(/___________/g, function() {
                 var replacement = '<input type="text" id="input-field-' + idCounter + '" class="input-field" /><button class="validate-button" onclick="validateInput(' + idCounter + ', \'' + values[idCounter] + '\', \'' + language + '\')">Validate</button>';
@@ -253,77 +265,78 @@
                 "Sua resposta foi única, mas não a correta.",
               ];
             } else {
-                 elogios = [
-                "Wow, you're a genius!",
-                "Wow, your intelligence is shining!",
-                "Incredible, you're killing it!",
-                "Wow, you're a walking encyclopedia!",
-                "Impressive, you really know your stuff!",
-                "I didn't know you were so smart!",
-                "You're like the human Google!",
-                "I'm impressed with your knowledge!",
-                "You're a master of the subject!",
-                "Bravo! You're amazing!",
-                "Your brain is a gold mine!",
-                "You're proof that intelligence is contagious!",
-                "You must have a degree in being smart!",
-                "You hit the nail on the head!",
-                "Your mind is a force of nature!",
-                "What a talent! You're a star!",
-                "You're so smart that scientists should study you!",
-                "You must be a learning machine!",
-                "Your knowledge is worthy of a Nobel Prize!",
-                "I wouldn't be surprised if you were a hidden genius!",
-                "Your brain deserves a round of applause!",
-                "You're sharper than a Swiss blade!",
-                "Your intelligence is out of this world!",
-                "You're a true connoisseur!",
-                "I've never seen anyone so smart!",
-                "You're the king/queen of knowledge!",
-                "You're a true master of answers!",
-                "Your brain is a priceless treasure!",
-                "You must be a prodigy!",
-                "It's an honor to talk to someone so intelligent!",
-                "You're a ray of wisdom!",
-              ];
-              
+                elogios = [
+                  "Wow, thou art a genius!",
+                  "Thou art shining with intelligence!",
+                  "Incredible, thou art slaying it!",
+                  "Wow, thou art a walking encyclopedia!",
+                  "Impressive, thou truly knowest thy stuff!",
+                  "I didn't know thou wert so smart!",
+                  "Thou art like unto human Google!",
+                  "I am impressed with thy knowledge!",
+                  "Thou art a master of the subject!",
+                  "Bravo! Thou art amazing!",
+                  "Thy brain is a gold mine!",
+                  "Thou art proof that intelligence is contagious!",
+                  "Thou must have a degree in being smart!",
+                  "Thou hast hit the nail on the head!",
+                  "Thy mind is a force of nature!",
+                  "What a talent! Thou art a star!",
+                  "Thou art so smart that scientists should study thee!",
+                  "Thou must be a learning machine!",
+                  "Thy knowledge is worthy of a Nobel Prize!",
+                  "I wouldn't be surprised if thou wert a hidden genius!",
+                  "Thy brain deserves a round of applause!",
+                  "Thou art sharper than a Swiss blade!",
+                  "Thy intelligence is out of this world!",
+                  "Thou art a true connoisseur!",
+                  "I've never seen anyone so smart!",
+                  "Thou art the king/queen of knowledge!",
+                  "Thou art a true master of answers!",
+                  "Thy brain is a priceless treasure!",
+                  "Thou must be a prodigy!",
+                  "It's an honor to converse with someone so intelligent!",
+                  "Thou art a ray of wisdom!",
+                ];
+
                 respostasErradas = [
-                "That was close, but not quite...",
-                "Well, that was an interesting attempt!",
-                "You're on the right track, but not quite there.",
-                "Almost there, keep trying!",
-                "Not bad, but it's not the right answer.",
-                "Good try! Let's give it another shot?",
-                "Looks like you slipped up on that answer.",
-                "And by a hair, you almost got it!",
-                "That wasn't quite it, but keep trying!",
-                "You're getting warmer, but you haven't hit it yet.",
-                "The right answer is within reach, but it wasn't that.",
-                "Don't worry, mistakes happen to the best of us!",
-                "You're close, but it's not quite there.",
-                "Almost got it, but not this time.",
-                "Good try! The next one might be the right one!",
-                "Don't get discouraged, you'll get there!",
-                "You're getting close, but it's not quite there.",
-                "Keep trying, you'll get there!",
-                "You missed by a hair, but don't give up!",
-                "You're on the right track, but it's not the final answer.",
-                "Don't get discouraged, it wasn't this time!",
-                "Almost a perfect answer, but not quite.",
-                "You're getting there, but it's not quite there yet.",
-                "You're getting warmer, but you haven't hit the target yet.",
-                "Don't worry, learning from mistakes is the right way!",
-                "Keep trying, you're making progress!",
-                "Your answer was a creative detour!",
-                "You're on the right track, but it's not that!",
-                "Good effort! The answer is close.",
-                "Mistakes are opportunities to learn!",
-                "Almost there, keep trying!",
-                "You're getting close, keep it up!",
-                "The right answer is close, but it wasn't that.",
-                "Not this time, but you're doing well!",
-                "Your answer was unique, but not the right one.",
-              ];
+                  "That was close, but verily not quite...",
+                  "Well, that was an interesting attempt, methinks!",
+                  "Thou art on the right track, but not quite there.",
+                  "Almost there, keep trying, good fellow!",
+                  "Not bad, but it's not the right answer, alas.",
+                  "Good try! Let's give it another shot?",
+                  "Looks like thou didst slip up on that answer.",
+                  "And by a hair, thou almost got it!",
+                  "That wasn't quite it, but keep trying!",
+                  "Thou art getting warmer, but thou hast not hit it yet.",
+                  "The right answer is within reach, but it wasn't that.",
+                  "Don't worry, mistakes happen to the best of us!",
+                  "Thou art close, but it's not quite there.",
+                  "Almost got it, but not this time, good sir/madam.",
+                  "Good try! The next one might be the right one, perchance!",
+                  "Don't get discouraged, thou shalt get there!",
+                  "Thou art getting close, but it's not quite there.",
+                  "Keep trying, thou shalt get there!",
+                  "Thou missed by a hair, but don't give up!",
+                  "Thou art on the right track, but it's not the final answer.",
+                  "Don't get discouraged, it wasn't this time!",
+                  "Almost a perfect answer, but not quite, good fellow.",
+                  "Thou art getting there, but it's not quite there yet.",
+                  "Thou art getting warmer, but thou hast not hit the target yet.",
+                  "Don't worry, learning from mistakes is the right way!",
+                  "Keep trying, thou art making progress!",
+                  "Thy answer was a creative detour, verily!",
+                  "Thou art on the right track, but it's not that!",
+                  "Good effort! The answer is close, methinks.",
+                  "Mistakes are opportunities to learn, good sir/madam!",
+                  "Almost there, keep trying, thou art doing well!",
+                  "Thou art getting close, keep it up!",
+                  "The right answer is close, but it wasn't that, alas.",
+                  "Not this time, but thou art doing well, good fellow!",
+                  "Thy answer was unique, but not the right one, verily.",
+                ];
+
             
             }
           //Escolha uma resposta certa aleatoriamente
