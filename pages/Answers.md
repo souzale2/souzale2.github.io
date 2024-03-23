@@ -22,3 +22,38 @@ Lesson 1 Answers in order.
   "water = repentance and baptism",
   "Spirit = Filling of the Holy Spirit"
   ];
+
+  Lesson 3B Answers in order.
+
+  var values = [
+  "Patriarchs",
+  "Isaac",
+  "Jacob",
+  "Esau",
+  "birthright",
+  "blessing",
+  "Bethel",
+  "Israel",
+  "Twelve",
+  "Tribes",
+  "FAVORED",
+  "Betrayed",
+  "Enslaved",
+  "Falsely",
+  "Accused",
+  "Imprisoned",
+  "forgotten",
+  "Was with",
+  "Forgiveness",
+  "bitter",
+  "avenge",
+  "of Christ",
+  "choice",
+  "right",
+  "pain",
+  "forget",
+  "reconciliation",
+  "one",
+  "two",
+  "int    
+];
