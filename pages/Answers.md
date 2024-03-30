@@ -66,3 +66,6 @@ var values = [
                "Blood", "Lamb", "Jesus", "Christ", "repentance", "applied",
                "Passover", "New", "Covenant", "Sea", "Red", "baptism", "cloud", "Holy Spirit"
              ];
+
+Lesson 4B Answers in order (Left to right)
+var values =  ["Exodus", "Ten Commandments","TABERNACLE","Communion"];

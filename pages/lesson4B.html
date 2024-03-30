@@ -243,7 +243,16 @@
             var content = document.getElementById('content');
             var html = content.innerHTML;
 
-            var values =  ["Êxodo", "Dez Mandamentos","TABERNÁCULO","Comunhão"];
+            var language = prompt("please enter a language: (en or pt)")
+            
+            if(language === "pt")
+            {
+                var values =  ["Êxodo", "Dez Mandamentos","TABERNÁCULO","Comunhão"];
+            }
+            else
+            {
+                var values =  ["Exodus", "Ten Commandments","TABERNACLE","Communion"];
+            }
 
             var idCounter = 0;
             var newHtml = html.replace(/___________/g, function() {
