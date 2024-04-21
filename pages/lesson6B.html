@@ -26,13 +26,28 @@
           cursor: pointer; /* Change the cursor to a pointer when hovering over the text */
         }
 
-        
-        [id^="image"] {
+
+        /* [id^="image"] {
                 width:100%;
-                max-width: 400px;
+                max-width: 300px;
+              
                 display:flex;
-                justify-content: space-betwen;
+                justify-content: center;
                 padding: 10px;
+        } */
+        .image-container {
+            display: flex;
+            justify-content: center;
+        }
+        .input-field {
+            width: 300px;
+            height: 100px;
+        }
+        .myImage {
+            width: 300px;
+            height: 300px;
+            align-items: center;
+            justify-content: center;
         }
     </style>
     
@@ -82,8 +97,10 @@
                   <li>Batismo no Espírito Santo</li>
                 </ul>
 
-                <input type="text" id="input-field-1" class="input-field" />
+                <textarea id="input-field-1" class="input-field"></textarea>
+                </br>
                 <button class="validate-button" onclick="getImages('image1', 'input-field-1')">Validate</button>
+                </br>
                 <section id="image1"> 
                 </section>
 
@@ -115,8 +132,10 @@
 
                 <p>(Veja Colossenses 2:9 e 1 Timóteo 3:16)</p>
 
-                <input type="text" id="input-field-2" class="input-field" />
+                <textarea id="input-field-2" class="input-field"></textarea>
+                </br>
                 <button class="validate-button" onclick="getImages('image2', 'input-field-2')">Validate</button>
+                </br>
                 <section id="image2"> 
                 </section>
 
@@ -150,8 +169,10 @@
 
                 <p>A tentação provou que Ele era sem pecado e o qualificou para ser nosso substituto.</p>
 
-                <input type="text" id="input-field-3" class="input-field" />
+                <textarea id="input-field-3" class="input-field"></textarea>
+                </br>
                 <button class="validate-button" onclick="getImages('image3', 'input-field-3')">Validate</button>
+                </br>
                 <section id="image3"> 
                 </section>
 
@@ -167,8 +188,10 @@
 
                 <p>Os milagres de Jesus provaram Sua divindade. (Leia João 14:10-11)</p>
 
-                <input type="text" id="input-field-4" class="input-field" />
+                <textarea id="input-field-4" class="input-field"></textarea>
+                </br>
                 <button class="validate-button" onclick="getImages('image4', 'input-field-4')">Validate</button>
+                </br>
                 <section id="image4"> 
                 </section>
             </div>
@@ -179,7 +202,7 @@
 
     <script>
         
-        const API_KEY = "sk-proj-o5PZ40KwY1fivUGJZAkbT3BlbkFJBxxkZm3MVIyBOQZpNKHa"
+        const API_KEY = "sk-proj-QhFJ6HaXz3ROotODF4CJT3BlbkFJrIIE7EZJbGXuGGSE9K4l"
        
 
         const getImages = async (imageSectionId, inputId) => {
@@ -214,8 +237,10 @@
                 const imageSection = document.getElementById(imageSectionId)
                 data?.data.forEach( imageObject=> {
                     const ImageContainer = document.createElement('div')
+                    ImageContainer.setAttribute('class','col-md-12 center-text')
                     ImageContainer.classList.add('image-container')
                     const imageElement = document.createElement('img')
+                    imageElement.setAttribute('class','myImage')
                     imageElement.setAttribute('src', imageObject.url)
                     ImageContainer.append(imageElement)
                     imageSection.append(ImageContainer)
