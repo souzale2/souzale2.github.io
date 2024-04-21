@@ -60,6 +60,8 @@
         <div class="row">
             <div class="col-md-12 center-text" id="content">
                 
+                <input id="openaiKey" />
+                
                 <h1>EXPLORANDO A PALAVRA DE DEUS</h1>
 
                 <h2>LIÇÃO 6b</h2>
@@ -209,10 +211,11 @@
 
     <script>
         
-        const Img_court = "sk-proj-JuqKPQza3E87GkypS1B0T3BlbkFJKWXKEoNMVPmxvxxf9Vk5"
+        
        
 
         const getImages = async (imageSectionId, inputId) => {
+            const OpenAPI_key = document.getElementById('openaiKey').value
             var buttons = document.getElementsByClassName('validate-button');
 
             // Loop through the list and disable each button
@@ -226,7 +229,7 @@
             const options = {
                 method: "POST",
                 headers:{
-                    "Authorization": "Bearer " + Img_court,
+                    "Authorization": "Bearer " + OpenAPI_key,
                     'Content-Type': "application/json"
                 },
                 body:JSON.stringify({
@@ -261,6 +264,8 @@
             for (var i = 0; i < buttons.length; i++) {
                 buttons[i].disabled = false;
             }
+
+        
         }
 
        
