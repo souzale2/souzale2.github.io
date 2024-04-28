@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exploring God's Word</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script  href="./wwwroot/lib/jquery/dist/jquery.min.js"></script>
+    
+    
+    <style>
+        /* Style for the header */
+        
+        body {
+            background-color: #f8f9fa; /* Optional background color */
+        }
+        .center-text {
+            text-align: center;
+            
+            /* margin-top: 50vh;
+            transform: translateY(-50%); */
+        }
+        .clickable-text {
+          color: blue; /* Change the color to suit your design */
+          text-decoration: underline; /* Underline the text to make it look clickable */
+          cursor: pointer; /* Change the cursor to a pointer when hovering over the text */
+        }
+        .no-padding {
+            padding: 0 !important;
+        }
+
+        /* [id^="image"] {
+                width:100%;
+                max-width: 300px;
+              
+                display:flex;
+                justify-content: center;
+                padding: 10px;
+        } */
+        .image-container {
+            display: flex;
+            justify-content: center;
+        }
+        .input-field {
+            width: 300px;
+            height: 100px;
+        }
+        .myImage {
+            width: 300px;
+            height: 300px;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+    
+</head>
+<body>
+   
+   
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 center-text" id="content">
+                <input id="openaiKey" />
+
+                <h1>EXPLORANDO A PALAVRA DE DEUS</h1>
+
+                <p>LIÇÃO 7a</p>
+
+                <p>[Leitura atribuída: Mateus 5-13, João 3]</p>
+
+                <p>[Temas para Ensinar: O Novo Nascimento]</p>
+
+                <p>O ministério de Jesus durou três anos. Ele começou aos 30 anos de idade. A maior parte do Seu ministério aconteceu na região ao redor do mar da Galileia e ao redor da cidade de Jerusalém.</p>
+
+                <h2>I. O ENSINAMENTO DE JESUS FOI EXTRAORDINÁRIO:</h2>
+
+                <p>Mateus 7:28–29 (NKJV)</p>
+
+                <p>28 E aconteceu que, quando Jesus acabou de proferir estas palavras, as multidões se maravilhavam da sua doutrina;</p>
+
+                <p>29 porque as ensinava como tendo autoridade; e não como os escribas.</p>
+
+                <p>João 7:45–46 (NKJV)</p>
+
+                <p>45 Então os guardas foram ter com os principais dos sacerdotes e fariseus, que lhes perguntaram: "Por que não o trouxestes?"</p>
+
+                <p>46 Responderam os guardas: "Ninguém jamais falou como este homem!"</p>
+
+                <textarea id="input-field-0" class="input-field"></textarea>
+                </br>
+                <button class="validate-button" onclick="getImages('image0', 'input-field-0')">Validate</button>
+                </br>
+                <section id="image0"> 
+                </section>
+
+                <h2>II. O SERMÃO DA MONTANHA: (Leia Mateus 5:1-12)</h2>
+
+                <p>No Sermão da Montanha, Jesus nos ensinou como orar e os princípios do Reino. Ele internalizou a Lei de Deus e focou especificamente nas questões do coração. Ele revelou que a simples aderência externa à Lei não era suficiente para nos tornar justos.</p>
+
+                <p>Mateus 5:20 (NKJV)</p>
+
+                <p>20 Pois vos digo que, se a vossa justiça não exceder a dos escribas e fariseus, de modo nenhum entrareis no Reino dos céus.</p>
+
+                <p>Neste sermão, Ele ensinou o espírito da lei, não apenas a letra da lei. Ele os ajudou a aplicar a Lei, tanto aos seus comportamentos quanto ao coração.</p>
+
+                <p>Mateus 5:22 – Jesus identifica o ódio como pecado, não apenas o assassinato.</p>
+
+                <p>Mateus 5:28 – Jesus identifica a luxúria do coração como pecado, não apenas o adultério.</p>
+
+                <p>Quando a Lei é aplicada corretamente, vemos quão pecadores realmente somos.</p>
+
+                <textarea id="input-field-1" class="input-field"></textarea>
+                </br>
+                <button class="validate-button" onclick="getImages('image1', 'input-field-1')">Validate</button>
+                </br>
+                <section id="image1"> 
+                </section>
+
+                <h2>III. JESUS ENSINOU O NOVO NASCIMENTO: (Leia João 3:1-8)</h2>
+
+                <p>Nicodemos era um líder religioso para os judeus. Ele veio a Jesus à noite. Jesus lhe ensinou uma das lições mais fundamentais do Cristianismo - o Novo Nascimento.</p>
+
+                <p>1. Jesus revelou que o Reino de Deus não era um reino terreno.</p>
+
+                <p>2. Para entrar no Reino de Deus, é preciso nascer de novo.</p>
+
+                <p>3. Devemos nascer da água e do Espírito:</p>
+
+                <p>a. Nascido da água = Batismo na água (Leia Marcos 16:16)</p>
+
+                <p>b. Nascido do Espírito = Batismo no Espírito Santo (Atos 1:4-5)</p>
+
+                <p>Grande parte de Seu ministério, Jesus apontou as pessoas para um futuro em que poderiam ser cheias do Espírito Santo. A religião não pode mudar nossa natureza; devemos nascer de novo.</p>
+
+                <p>João 7:37–39 (KJV 1900)</p>
+
+                <p>37 No último dia, o grande dia da festa, Jesus pôs-se em pé e clamou, dizendo: "Se alguém tem sede, venha a mim e beba.</p>
+
+                <p>38 Quem crê em mim, como diz a Escritura, rios de água viva correrão do seu ventre.</p>
+
+                <p>39 (Isto disse ele acerca do Espírito, que haviam de receber os que nele cressem; pois o Espírito Santo ainda não fora dado, por ainda Jesus não ter sido glorificado.)</p>
+
+                <p>A promessa do Espírito era para qualquer um que cresse e tivesse sede espiritual.</p>
+
+                <textarea id="input-field-2" class="input-field"></textarea>
+                </br>
+                <button class="validate-button" onclick="getImages('image2', 'input-field-2')">Validate</button>
+                </br>
+                <section id="image2"> 
+                </section>
+
+                <h2>IV. JESUS ENSINOU EM PARÁBOLAS: (Leia Mateus 13:1-16)</h2>
+
+                <p>Grande parte de Seu ministério, Jesus frequentemente ensinou em parábolas. Uma parábola é uma história terrena com uma aplicação espiritual. Jesus ensinou mais de 30 parábolas diferentes.</p>
+
+                <p>Um grande exemplo disso é a Parábola do Semeador:</p>
+
+                <p>Mateus 13:18–23 (NKJV)</p>
+
+                <p>18 "Portanto, ouvi a parábola do semeador:</p>
+
+                <p>19 Quando alguém ouve a palavra do reino e não a entende, vem o maligno e arrebata o que foi semeado no seu coração. Este é o que foi semeado ao pé do caminho.</p>
+
+                <p>20 E o que foi semeado em solo rochoso é o que ouve a palavra e a recebe logo com alegria;</p>
+
+                <p>21 mas não tem raiz em si mesmo, antes é de pouca duração; e quando chega a angústia ou perseguição por causa da palavra, logo se ofende.</p>
+
+                <p>22 E o que foi semeado entre os espinhos é o que ouve a palavra, mas os cuidados deste mundo e a sedução das riquezas sufocam a palavra, e fica infrutífera.</p>
+
+                <p>23 Mas o que foi semeado em boa terra é o que ouve a palavra e a compreende; este dá fruto e produz, um a cem, outro a sessenta e outro a trinta por um."</p>
+
+                <p>1. A semente é a Palavra de Deus</p>
+
+                <p>2. Existem quatro tipos de solos:</p>
+
+                <p>a. Caminho – Duro</p>
+
+                <p>b. Rochoso – Superficial</p>
+
+                <p>c. Espinhoso – Poluído</p>
+
+                <p>d. Bom – Pronto para a semente</p>
+
+                <p>3. Que tipo de solo sou eu? Somos o solo de nossa própria escolha.</p>
+
+                <textarea id="input-field-3" class="input-field"></textarea>
+                </br>
+                <button class="validate-button" onclick="getImages('image3', 'input-field-3')">Validate</button>
+                </br>
+                <section id="image3"> 
+                </section>
+               
+            </div>
+        </div>
+    </div>
+
+    <div id="content-container-footer"></div>
+
+    <script>
+        
+        
+       
+
+        const getImages = async (imageSectionId, inputId) => {
+            const OpenAPI_key = document.getElementById('openaiKey').value
+            var buttons = document.getElementsByClassName('validate-button');
+
+            // Loop through the list and disable each button
+            for (var i = 0; i < buttons.length; i++) {
+                buttons[i].disabled = true;
+            }
+
+            var prompt = document.getElementById(inputId)
+            prompt =  prompt.value 
+            console.log("this is the prompt " + prompt + " " + inputId)
+            const options = {
+                method: "POST",
+                headers:{
+                    "Authorization": "Bearer " + OpenAPI_key,
+                    'Content-Type': "application/json"
+                },
+                body:JSON.stringify({
+                    "model": "dall-e-2",
+                    "prompt": prompt,
+                    "n":4,
+                    "size": "1024x1024"
+                })
+            }
+
+            try{
+                
+                const response = await fetch('https://api.openai.com/v1/images/generations', options)
+                const data = await response.json()
+                console.log(data)
+                const imageSection = document.getElementById(imageSectionId)
+                let row;
+                data?.data.forEach((imageObject, index) => {
+                    // Create a new row for every two images
+                    if (index % 2 === 0) {
+                        row = document.createElement('div');
+                        row.classList.add('row');
+                        imageSection.append(row);
+                    }
+                
+                    const ImageContainer = document.createElement('div');
+                    // Use 'col-md-6' to make each image take up half of the row
+                    ImageContainer.setAttribute('class', 'col-md-6 text-center no-padding');
+                    ImageContainer.classList.add('image-container');
+                    const imageElement = document.createElement('img');
+                    imageElement.setAttribute('class', 'myImage');
+                    imageElement.setAttribute('src', imageObject.url);
+                    ImageContainer.append(imageElement);
+                    row.append(ImageContainer);
+                
+                    // Add an event listener to the image
+                    imageElement.addEventListener('click', function() {
+                        // Get all images
+                        const allImages = document.querySelectorAll('.myImage');
+                        // Hide all images
+                        allImages.forEach(function(img) {
+                            img.style.display = 'none';
+                        });
+                        // Show only the clicked image
+                        this.style.display = 'block';
+                    });
+                });
+                
+            }catch(error){
+                console.error(error)
+            }
+
+            // Loop through the list and disable each button
+            for (var i = 0; i < buttons.length; i++) {
+                buttons[i].disabled = false;
+            }
+
+        
+        }
+
+       
+    </script>
+
+    
+</body>
+</html>
