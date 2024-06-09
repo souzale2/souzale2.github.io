@@ -13,7 +13,8 @@ var pages = [
     "lesson6B",
     "lesson7A",
     "lesson7B",
-    "lesson8"
+    "lesson8",
+    "lesson9A"
 
     // Add more page names as needed
 ];
