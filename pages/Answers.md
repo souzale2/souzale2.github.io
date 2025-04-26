@@ -1,6 +1,8 @@
 
 Lesson 1 Answers in order.
 
+  English:
+
   [
   "six days",
   "inhabited",
@@ -22,6 +24,31 @@ Lesson 1 Answers in order.
   "water = repentance and baptism",
   "Spirit = Filling of the Holy Spirit"
   ];
+  
+  Portugues:
+
+  [
+    "seis dias",
+    "habitado",
+    "relacionamento",
+    "imagem",
+    "criativo",
+    "espiritual",
+    "raciocínio",
+    "relacional",
+    "autoconsciente",
+    "livre arbítrio",
+    "poder de escolha",
+    "proximidade",
+    "dois mundos",
+    "físico",
+    "espiritual",
+    "espiritualmente mortos",
+    "nascer de novo",
+    "água = arrependimento e batismo",
+    "Espírito = Enchimento do Espírito Santo"
+  ];
+
 
   Lesson 3B Answers in order.
 
