@@ -1,6 +1,8 @@
 
 Lesson 1 Answers in order.
 
+  Link: https://www.clcwi.com/media/8pw8rxr/bible-study-methods-lesson-1a
+  
   English:
 
   [
